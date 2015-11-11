@@ -43,8 +43,8 @@ HyperLogLog_init(HyperLogLog *self, PyObject *args, PyObject *kwds)
         return -1; 
     }
 
-    if (self->k < 2 || self->k > 16) {
-        char * msg = "Number of registers must be in the range [2^2, 2^16]";
+    if (self->k < 2 || self->k > 24) {
+        char * msg = "Number of registers must be in the range [2^2, 2^24]";
         PyErr_SetString(PyExc_ValueError, msg);
 	return -1;
     } 
